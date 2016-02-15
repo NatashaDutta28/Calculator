@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oom-MZ-edm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="6Ka-9e-H1O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="vmI-dB-qb8">
+                                <rect key="frame" x="0.0" y="96" width="375" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="142-W4-sbo"/>
+                                    <constraint firstAttribute="height" constant="38" id="O2Q-Fi-XrE"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="142-W4-sbo"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gp-GV-oFy">
+                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEN-xa-Eun" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="89"/>
+                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="SJn-Mx-34f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearEquation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yF8-ZC-PaY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpJ-YK-GGy" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="0.0" width="94" height="89"/>
+                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="gJJ-za-YBv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="+/-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-ra-62S" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="0.0" width="94" height="89"/>
+                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="8Zg-IN-hsz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-66-P6c" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="178" width="93" height="89"/>
+                                        <color key="backgroundColor" red="0.074509803921568626" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title=" ÷ ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XkP-bL-T8j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpP-9L-nhU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="89" width="94" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="ELF-ku-Vxj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9V-42-Irs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoa-zV-cBy" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="89" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yX-Yf-Ijb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKG-fk-R8C" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="89" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OwX-nu-tg0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vj4-M4-9kZ" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="267" width="93" height="89"/>
+                                        <color key="backgroundColor" red="0.074509803921568626" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title=" x ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oiy-3j-6IS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLb-u4-jXE" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="94" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="sJL-h0-squ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqC-Ss-sVV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3W-GR-Mez" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="178" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ie9-7x-Nt7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaX-38-oxc" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="178" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4D-XJ-dXf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOy-KW-BXQ" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="356" width="93" height="89"/>
+                                        <color key="backgroundColor" red="0.074509803921568626" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title=" + ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pf0-eJ-e3D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kb-yR-3vM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="267" width="94" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="fbY-gN-B1P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="usD-te-shI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-aQ-ghp" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="267" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ONf-RI-31d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLd-3y-oRA" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="267" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QVO-CE-zsT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alP-jB-trc" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="445" width="93" height="89"/>
+                                        <color key="backgroundColor" red="0.073720581100000002" green="0.75074074349999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title=" - ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7w-bZ-pIe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtL-di-uIP" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="356" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="!">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bq-P2-KTO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEo-63-n5P" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="356" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cja-Bt-WQM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-b9-YYp" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="356" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="avH-qj-hLi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8u-FN-wVz" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="89" width="93" height="89"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="DEL">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteLastValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hk6-5x-gut"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCS-qW-Toy" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="445" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fH-FP-g9I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8is-ja-6Df" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="445" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="log">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3K-T8-XMV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMg-4Y-rGK" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="445" width="94" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="^">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enternumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Bq-uS-iXa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxu-x5-GRi" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="282" y="0.0" width="93" height="89"/>
+                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="⏎">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="k3W-GR-Mez" firstAttribute="baseline" secondItem="KLb-u4-jXE" secondAttribute="baseline" id="0Gv-mH-Gx8"/>
+                                    <constraint firstItem="KLb-u4-jXE" firstAttribute="top" secondItem="YpP-9L-nhU" secondAttribute="bottom" id="0LT-pg-Avq"/>
+                                    <constraint firstItem="Dxu-x5-GRi" firstAttribute="baseline" secondItem="JL3-ra-62S" secondAttribute="baseline" id="0dt-JN-CCm"/>
+                                    <constraint firstItem="zqd-aQ-ghp" firstAttribute="trailing" secondItem="k3W-GR-Mez" secondAttribute="trailing" id="0eh-Fb-C9H"/>
+                                    <constraint firstItem="hLd-3y-oRA" firstAttribute="leading" secondItem="aNw-b9-YYp" secondAttribute="leading" id="0iS-PH-C9g"/>
+                                    <constraint firstItem="Dxu-x5-GRi" firstAttribute="trailing" secondItem="m8u-FN-wVz" secondAttribute="trailing" id="1ja-F2-XrZ"/>
+                                    <constraint firstItem="TtL-di-uIP" firstAttribute="leading" secondItem="3kb-yR-3vM" secondAttribute="leading" id="1yL-k3-Sa1"/>
+                                    <constraint firstItem="JL3-ra-62S" firstAttribute="leading" secondItem="oKG-fk-R8C" secondAttribute="leading" id="22s-tO-XhP"/>
+                                    <constraint firstItem="KOy-KW-BXQ" firstAttribute="trailing" secondItem="vj4-M4-9kZ" secondAttribute="trailing" id="2SI-Md-pWA"/>
+                                    <constraint firstItem="KOy-KW-BXQ" firstAttribute="firstBaseline" secondItem="aNw-b9-YYp" secondAttribute="baseline" id="3Nh-nO-fKO"/>
+                                    <constraint firstItem="JL3-ra-62S" firstAttribute="top" secondItem="YpJ-YK-GGy" secondAttribute="top" id="4gb-HH-f35"/>
+                                    <constraint firstItem="vj4-M4-9kZ" firstAttribute="top" secondItem="hLd-3y-oRA" secondAttribute="top" id="5Ls-dJ-FSb"/>
+                                    <constraint firstItem="uoa-zV-cBy" firstAttribute="top" secondItem="YpP-9L-nhU" secondAttribute="top" id="5Y9-LG-b0i"/>
+                                    <constraint firstItem="uEo-63-n5P" firstAttribute="bottom" secondItem="aNw-b9-YYp" secondAttribute="bottom" id="5ue-CF-x2f"/>
+                                    <constraint firstItem="aNw-b9-YYp" firstAttribute="trailing" secondItem="qMg-4Y-rGK" secondAttribute="trailing" id="75V-4h-q2b"/>
+                                    <constraint firstItem="YpP-9L-nhU" firstAttribute="baseline" secondItem="uoa-zV-cBy" secondAttribute="baseline" id="7uc-6z-Zhf"/>
+                                    <constraint firstItem="JL3-ra-62S" firstAttribute="top" secondItem="7Gp-GV-oFy" secondAttribute="top" id="8K5-6K-SFU"/>
+                                    <constraint firstItem="YpP-9L-nhU" firstAttribute="baseline" secondItem="uoa-zV-cBy" secondAttribute="firstBaseline" id="9J5-Bg-r1N"/>
+                                    <constraint firstItem="qMg-4Y-rGK" firstAttribute="top" secondItem="8is-ja-6Df" secondAttribute="top" id="9L0-pf-fBx"/>
+                                    <constraint firstItem="KLb-u4-jXE" firstAttribute="leading" secondItem="3kb-yR-3vM" secondAttribute="leading" id="9eJ-vJ-Sw1"/>
+                                    <constraint firstItem="dCS-qW-Toy" firstAttribute="trailing" secondItem="3kb-yR-3vM" secondAttribute="trailing" id="BFA-RU-7dZ"/>
+                                    <constraint firstItem="xgO-66-P6c" firstAttribute="bottom" secondItem="RaX-38-oxc" secondAttribute="bottom" id="CLd-LT-LKa"/>
+                                    <constraint firstItem="uoa-zV-cBy" firstAttribute="baseline" secondItem="YpP-9L-nhU" secondAttribute="firstBaseline" id="DyV-Jl-rmx"/>
+                                    <constraint firstItem="hLd-3y-oRA" firstAttribute="trailing" secondItem="aNw-b9-YYp" secondAttribute="trailing" id="HLW-nF-NDu"/>
+                                    <constraint firstItem="YpJ-YK-GGy" firstAttribute="trailing" secondItem="uoa-zV-cBy" secondAttribute="trailing" id="Im6-UH-B3Y"/>
+                                    <constraint firstItem="8is-ja-6Df" firstAttribute="top" secondItem="uEo-63-n5P" secondAttribute="bottom" id="JCT-gx-aak"/>
+                                    <constraint firstItem="KOy-KW-BXQ" firstAttribute="top" secondItem="aNw-b9-YYp" secondAttribute="top" id="KRK-0N-Lep"/>
+                                    <constraint firstItem="oKG-fk-R8C" firstAttribute="baseline" secondItem="uoa-zV-cBy" secondAttribute="baseline" id="Kmi-h3-KfP"/>
+                                    <constraint firstItem="AEN-xa-Eun" firstAttribute="baseline" secondItem="YpJ-YK-GGy" secondAttribute="firstBaseline" id="LGn-ba-fBt"/>
+                                    <constraint firstItem="uEo-63-n5P" firstAttribute="trailing" secondItem="8is-ja-6Df" secondAttribute="trailing" id="LTA-yk-SZX"/>
+                                    <constraint firstItem="alP-jB-trc" firstAttribute="bottom" secondItem="qMg-4Y-rGK" secondAttribute="bottom" id="LeF-Ml-lpF"/>
+                                    <constraint firstItem="AEN-xa-Eun" firstAttribute="leading" secondItem="YpP-9L-nhU" secondAttribute="leading" id="MPc-yr-vde"/>
+                                    <constraint firstItem="YpP-9L-nhU" firstAttribute="trailing" secondItem="KLb-u4-jXE" secondAttribute="trailing" id="MYy-Wb-G3v"/>
+                                    <constraint firstItem="TtL-di-uIP" firstAttribute="top" secondItem="3kb-yR-3vM" secondAttribute="bottom" id="Okd-La-IPW"/>
+                                    <constraint firstItem="TtL-di-uIP" firstAttribute="firstBaseline" secondItem="uEo-63-n5P" secondAttribute="baseline" id="OyJ-NS-iBi"/>
+                                    <constraint firstItem="3kb-yR-3vM" firstAttribute="top" secondItem="KLb-u4-jXE" secondAttribute="bottom" id="PCh-TU-bIV"/>
+                                    <constraint firstItem="YpJ-YK-GGy" firstAttribute="top" secondItem="AEN-xa-Eun" secondAttribute="top" id="PQl-fa-vxp"/>
+                                    <constraint firstItem="Dxu-x5-GRi" firstAttribute="firstBaseline" secondItem="JL3-ra-62S" secondAttribute="baseline" id="PRf-h4-fNv"/>
+                                    <constraint firstItem="hLd-3y-oRA" firstAttribute="top" secondItem="zqd-aQ-ghp" secondAttribute="top" id="Pyn-f2-nws"/>
+                                    <constraint firstItem="k3W-GR-Mez" firstAttribute="baseline" secondItem="KLb-u4-jXE" secondAttribute="firstBaseline" id="QjX-up-7Ba"/>
+                                    <constraint firstItem="uoa-zV-cBy" firstAttribute="top" secondItem="oKG-fk-R8C" secondAttribute="top" id="T5D-ke-DSl"/>
+                                    <constraint firstItem="dCS-qW-Toy" firstAttribute="baseline" secondItem="8is-ja-6Df" secondAttribute="firstBaseline" id="Tof-M4-HNa"/>
+                                    <constraint firstItem="aNw-b9-YYp" firstAttribute="top" secondItem="uEo-63-n5P" secondAttribute="top" id="U3a-cl-6LP"/>
+                                    <constraint firstItem="8is-ja-6Df" firstAttribute="baseline" secondItem="qMg-4Y-rGK" secondAttribute="firstBaseline" id="UgQ-Uj-o82"/>
+                                    <constraint firstItem="TtL-di-uIP" firstAttribute="baseline" secondItem="uEo-63-n5P" secondAttribute="firstBaseline" id="V3j-XY-0aD"/>
+                                    <constraint firstItem="TtL-di-uIP" firstAttribute="trailing" secondItem="3kb-yR-3vM" secondAttribute="trailing" id="VBC-VW-6TJ"/>
+                                    <constraint firstItem="JL3-ra-62S" firstAttribute="trailing" secondItem="oKG-fk-R8C" secondAttribute="trailing" id="VeU-pg-f5r"/>
+                                    <constraint firstItem="KOy-KW-BXQ" firstAttribute="baseline" secondItem="aNw-b9-YYp" secondAttribute="firstBaseline" id="WBM-W1-R1L"/>
+                                    <constraint firstItem="oKG-fk-R8C" firstAttribute="trailing" secondItem="RaX-38-oxc" secondAttribute="trailing" id="WZk-oi-LHr"/>
+                                    <constraint firstItem="uoa-zV-cBy" firstAttribute="baseline" secondItem="oKG-fk-R8C" secondAttribute="firstBaseline" id="Wop-hD-YmH"/>
+                                    <constraint firstItem="KLb-u4-jXE" firstAttribute="baseline" secondItem="k3W-GR-Mez" secondAttribute="firstBaseline" id="ZOd-VO-21l"/>
+                                    <constraint firstItem="uoa-zV-cBy" firstAttribute="trailing" secondItem="k3W-GR-Mez" secondAttribute="trailing" id="Zgs-8F-dFH"/>
+                                    <constraint firstItem="aNw-b9-YYp" firstAttribute="leading" secondItem="qMg-4Y-rGK" secondAttribute="leading" id="aCo-pD-nMS"/>
+                                    <constraint firstItem="zqd-aQ-ghp" firstAttribute="baseline" secondItem="hLd-3y-oRA" secondAttribute="baseline" id="bHU-dc-qAg"/>
+                                    <constraint firstItem="Dxu-x5-GRi" firstAttribute="leading" secondItem="YpJ-YK-GGy" secondAttribute="trailing" constant="94" id="bvC-Nm-Thc"/>
+                                    <constraint firstItem="hLd-3y-oRA" firstAttribute="leading" secondItem="RaX-38-oxc" secondAttribute="leading" id="cRl-FL-TBi"/>
+                                    <constraint firstItem="m8u-FN-wVz" firstAttribute="leading" secondItem="Dxu-x5-GRi" secondAttribute="leading" id="cZ1-oK-Ds1"/>
+                                    <constraint firstItem="xgO-66-P6c" firstAttribute="top" secondItem="RaX-38-oxc" secondAttribute="top" id="cjY-J4-ubH"/>
+                                    <constraint firstItem="RaX-38-oxc" firstAttribute="top" secondItem="k3W-GR-Mez" secondAttribute="top" id="dHc-Ws-kDS"/>
+                                    <constraint firstItem="m8u-FN-wVz" firstAttribute="firstBaseline" secondItem="oKG-fk-R8C" secondAttribute="baseline" id="dIm-vW-jEm"/>
+                                    <constraint firstItem="YpJ-YK-GGy" firstAttribute="leading" secondItem="AEN-xa-Eun" secondAttribute="trailing" id="ddU-S3-EHy"/>
+                                    <constraint firstItem="uEo-63-n5P" firstAttribute="leading" secondItem="8is-ja-6Df" secondAttribute="leading" id="dgc-9a-mFz"/>
+                                    <constraint firstItem="YpP-9L-nhU" firstAttribute="top" secondItem="AEN-xa-Eun" secondAttribute="bottom" id="e3u-ra-b5M"/>
+                                    <constraint firstItem="alP-jB-trc" firstAttribute="trailing" secondItem="KOy-KW-BXQ" secondAttribute="trailing" id="eHD-Xm-pVM"/>
+                                    <constraint firstItem="xgO-66-P6c" firstAttribute="leading" secondItem="m8u-FN-wVz" secondAttribute="leading" id="ezX-25-LPD"/>
+                                    <constraint firstItem="zqd-aQ-ghp" firstAttribute="leading" secondItem="k3W-GR-Mez" secondAttribute="leading" id="fPy-40-cEc"/>
+                                    <constraint firstItem="3kb-yR-3vM" firstAttribute="top" secondItem="zqd-aQ-ghp" secondAttribute="top" id="frz-Nb-SA6"/>
+                                    <constraint firstItem="dCS-qW-Toy" firstAttribute="leading" secondItem="3kb-yR-3vM" secondAttribute="leading" id="g3r-KV-wgk"/>
+                                    <constraint firstItem="hLd-3y-oRA" firstAttribute="trailing" secondItem="RaX-38-oxc" secondAttribute="trailing" id="gTG-Vh-CNS"/>
+                                    <constraint firstItem="8is-ja-6Df" firstAttribute="top" secondItem="dCS-qW-Toy" secondAttribute="top" id="h2h-4S-8bj"/>
+                                    <constraint firstItem="m8u-FN-wVz" firstAttribute="top" secondItem="oKG-fk-R8C" secondAttribute="top" id="hCg-zC-4lz"/>
+                                    <constraint firstItem="AEN-xa-Eun" firstAttribute="baseline" secondItem="YpJ-YK-GGy" secondAttribute="baseline" id="hrV-7R-iTv"/>
+                                    <constraint firstAttribute="trailing" secondItem="xgO-66-P6c" secondAttribute="trailing" id="ihe-qo-cJH"/>
+                                    <constraint firstItem="YpJ-YK-GGy" firstAttribute="baseline" secondItem="AEN-xa-Eun" secondAttribute="firstBaseline" id="jGJ-Hr-o4Q"/>
+                                    <constraint firstItem="TtL-di-uIP" firstAttribute="top" secondItem="uEo-63-n5P" secondAttribute="top" id="lR6-LY-mr8"/>
+                                    <constraint firstItem="YpP-9L-nhU" firstAttribute="trailing" secondItem="AEN-xa-Eun" secondAttribute="trailing" id="lWV-ny-vgk"/>
+                                    <constraint firstItem="k3W-GR-Mez" firstAttribute="baseline" secondItem="RaX-38-oxc" secondAttribute="firstBaseline" id="lc1-aS-Hrh"/>
+                                    <constraint firstItem="k3W-GR-Mez" firstAttribute="baseline" secondItem="RaX-38-oxc" secondAttribute="baseline" id="lhY-wE-Rhj"/>
+                                    <constraint firstItem="vj4-M4-9kZ" firstAttribute="bottom" secondItem="hLd-3y-oRA" secondAttribute="bottom" id="lmb-Db-eZJ"/>
+                                    <constraint firstItem="YpJ-YK-GGy" firstAttribute="baseline" secondItem="JL3-ra-62S" secondAttribute="baseline" id="mPJ-ci-6V5"/>
+                                    <constraint firstItem="KLb-u4-jXE" firstAttribute="leading" secondItem="YpP-9L-nhU" secondAttribute="leading" id="meH-nX-cfG"/>
+                                    <constraint firstItem="vj4-M4-9kZ" firstAttribute="trailing" secondItem="xgO-66-P6c" secondAttribute="trailing" id="mz5-QH-FTF"/>
+                                    <constraint firstItem="k3W-GR-Mez" firstAttribute="leading" secondItem="uoa-zV-cBy" secondAttribute="leading" id="nGc-sV-JLa"/>
+                                    <constraint firstItem="alP-jB-trc" firstAttribute="leading" secondItem="KOy-KW-BXQ" secondAttribute="leading" id="oD3-iq-saa"/>
+                                    <constraint firstItem="YpJ-YK-GGy" firstAttribute="baseline" secondItem="JL3-ra-62S" secondAttribute="firstBaseline" id="obk-FQ-EPq"/>
+                                    <constraint firstItem="uEo-63-n5P" firstAttribute="top" secondItem="zqd-aQ-ghp" secondAttribute="bottom" id="oyl-fH-Ade"/>
+                                    <constraint firstItem="8is-ja-6Df" firstAttribute="baseline" secondItem="dCS-qW-Toy" secondAttribute="firstBaseline" id="pfy-6M-bpI"/>
+                                    <constraint firstItem="xgO-66-P6c" firstAttribute="leading" secondItem="vj4-M4-9kZ" secondAttribute="leading" id="qEJ-fj-Ueh"/>
+                                    <constraint firstItem="dCS-qW-Toy" firstAttribute="top" secondItem="3kb-yR-3vM" secondAttribute="bottom" constant="89" id="qiB-UV-36I"/>
+                                    <constraint firstItem="8is-ja-6Df" firstAttribute="baseline" secondItem="dCS-qW-Toy" secondAttribute="baseline" id="rwX-Lw-Fm0"/>
+                                    <constraint firstItem="RaX-38-oxc" firstAttribute="leading" secondItem="oKG-fk-R8C" secondAttribute="leading" id="saK-NG-mZJ"/>
+                                    <constraint firstItem="zqd-aQ-ghp" firstAttribute="trailing" secondItem="uEo-63-n5P" secondAttribute="trailing" id="tdB-3C-dat"/>
+                                    <constraint firstItem="3kb-yR-3vM" firstAttribute="baseline" secondItem="zqd-aQ-ghp" secondAttribute="firstBaseline" id="thH-Dw-6IA"/>
+                                    <constraint firstItem="JL3-ra-62S" firstAttribute="leading" secondItem="YpJ-YK-GGy" secondAttribute="trailing" id="u5i-nH-vws"/>
+                                    <constraint firstAttribute="bottom" secondItem="dCS-qW-Toy" secondAttribute="bottom" constant="-1" id="ud3-RW-oPP"/>
+                                    <constraint firstItem="3kb-yR-3vM" firstAttribute="trailing" secondItem="KLb-u4-jXE" secondAttribute="trailing" id="utv-gE-8wH"/>
+                                    <constraint firstItem="xgO-66-P6c" firstAttribute="trailing" secondItem="m8u-FN-wVz" secondAttribute="trailing" id="vCJ-CZ-yr3"/>
+                                    <constraint firstItem="KLb-u4-jXE" firstAttribute="leading" secondItem="7Gp-GV-oFy" secondAttribute="leading" id="vci-Vr-3xM"/>
+                                    <constraint firstItem="uEo-63-n5P" firstAttribute="leading" secondItem="7Gp-GV-oFy" secondAttribute="leading" constant="94" id="vqJ-6o-vRM"/>
+                                    <constraint firstItem="vj4-M4-9kZ" firstAttribute="leading" secondItem="KOy-KW-BXQ" secondAttribute="leading" id="w9c-lD-xuM"/>
+                                    <constraint firstItem="uoa-zV-cBy" firstAttribute="leading" secondItem="YpJ-YK-GGy" secondAttribute="leading" id="wgJ-Qd-Ohp"/>
+                                    <constraint firstItem="qMg-4Y-rGK" firstAttribute="baseline" secondItem="8is-ja-6Df" secondAttribute="baseline" id="wl1-zo-ugB"/>
+                                    <constraint firstItem="alP-jB-trc" firstAttribute="top" secondItem="qMg-4Y-rGK" secondAttribute="top" id="wra-dI-UrO"/>
+                                    <constraint firstItem="zqd-aQ-ghp" firstAttribute="baseline" secondItem="hLd-3y-oRA" secondAttribute="firstBaseline" id="xdm-j0-nvX"/>
+                                    <constraint firstItem="KLb-u4-jXE" firstAttribute="top" secondItem="k3W-GR-Mez" secondAttribute="top" id="yFK-0A-7CS"/>
+                                    <constraint firstItem="3kb-yR-3vM" firstAttribute="baseline" secondItem="zqd-aQ-ghp" secondAttribute="baseline" id="yct-A6-gfd"/>
+                                    <constraint firstItem="Dxu-x5-GRi" firstAttribute="top" secondItem="JL3-ra-62S" secondAttribute="top" id="ytW-Qx-Dxy"/>
+                                    <constraint firstItem="zqd-aQ-ghp" firstAttribute="leading" secondItem="uEo-63-n5P" secondAttribute="leading" id="z2S-At-L3p"/>
+                                    <constraint firstItem="m8u-FN-wVz" firstAttribute="baseline" secondItem="oKG-fk-R8C" secondAttribute="baseline" id="zpF-2y-Nax"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oom-MZ-edm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0su-x3-okQ"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Eg5-XF-2au"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="133" id="EvT-ET-MSf"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="top" secondItem="oom-MZ-edm" secondAttribute="bottom" constant="38" id="IIq-Tr-v2w"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="top" secondItem="oom-MZ-edm" secondAttribute="bottom" constant="38" id="JMM-Tv-PMi"/>
+                            <constraint firstItem="vmI-dB-qb8" firstAttribute="trailing" secondItem="oom-MZ-edm" secondAttribute="trailing" id="JRc-jQ-6ke"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="trailing" secondItem="vmI-dB-qb8" secondAttribute="trailing" id="K6q-yU-jrR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vmI-dB-qb8" secondAttribute="bottom" constant="533" id="XFc-2T-WOw"/>
+                            <constraint firstItem="vmI-dB-qb8" firstAttribute="top" secondItem="oom-MZ-edm" secondAttribute="bottom" constant="1" id="fFJ-38-4WI"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="leading" secondItem="vmI-dB-qb8" secondAttribute="leading" id="fKl-Sf-cJA"/>
+                            <constraint firstItem="oom-MZ-edm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hKY-LT-y7x"/>
+                            <constraint firstItem="vmI-dB-qb8" firstAttribute="leading" secondItem="oom-MZ-edm" secondAttribute="leading" id="iCd-ak-K13"/>
+                            <constraint firstAttribute="trailing" secondItem="vmI-dB-qb8" secondAttribute="trailing" id="psu-9r-cqV"/>
+                            <constraint firstItem="oom-MZ-edm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tnk-O3-hX2"/>
+                            <constraint firstItem="7Gp-GV-oFy" firstAttribute="top" secondItem="vmI-dB-qb8" secondAttribute="bottom" id="viN-vZ-oIl"/>
+                            <constraint firstItem="oom-MZ-edm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w5Z-iv-c3B"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0su-x3-okQ"/>
+                                <exclude reference="w5Z-iv-c3B"/>
+                                <exclude reference="EvT-ET-MSf"/>
+                                <exclude reference="IIq-Tr-v2w"/>
+                                <exclude reference="JMM-Tv-PMi"/>
+                                <exclude reference="XFc-2T-WOw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="oom-MZ-edm" id="anH-bg-jwd"/>
+                        <outlet property="inputTextView" destination="vmI-dB-qb8" id="Bey-i4-XbC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="289.5"/>
+        </scene>
+    </scenes>
+</document>

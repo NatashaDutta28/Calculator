@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="jM7-EW-F6q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="k5A-1u-fRt">
+            <objects>
+                <viewController id="jM7-EW-F6q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XrW-Dx-jET"/>
+                        <viewControllerLayoutGuide type="bottom" id="4xi-ID-zWN"/>
+                    </layoutGuides>
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="e4c-k4-vNk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMq-Kr-3XS">
+                                <rect key="frame" x="67" y="259" width="241" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZg-yf-9fD">
+                                        <rect key="frame" x="0.0" y="108" width="241" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="1CS-FS-afO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1CS-FS-afO"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calculator-104" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-p2-fza">
+                                        <rect key="frame" x="70" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="863-I5-1Oi"/>
+                                            <constraint firstAttribute="width" constant="100" id="dA1-IH-7UP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="YZg-yf-9fD" firstAttribute="top" secondItem="ba7-p2-fza" secondAttribute="bottom" constant="8" symbolic="YES" id="5Os-9P-Kde"/>
+                                    <constraint firstAttribute="height" constant="170" id="LIb-bO-5w5"/>
+                                    <constraint firstAttribute="bottom" secondItem="YZg-yf-9fD" secondAttribute="bottom" id="UV4-xg-Kkk"/>
+                                    <constraint firstAttribute="width" constant="241" id="ZEW-rx-QOD"/>
+                                    <constraint firstItem="ba7-p2-fza" firstAttribute="top" secondItem="MMq-Kr-3XS" secondAttribute="top" id="adK-J7-uBh"/>
+                                    <constraint firstItem="YZg-yf-9fD" firstAttribute="centerX" secondItem="ba7-p2-fza" secondAttribute="centerX" id="mPS-lY-R3Z"/>
+                                    <constraint firstItem="ba7-p2-fza" firstAttribute="centerX" secondItem="MMq-Kr-3XS" secondAttribute="centerX" id="oE3-MV-x3M"/>
+                                    <constraint firstItem="YZg-yf-9fD" firstAttribute="leading" secondItem="MMq-Kr-3XS" secondAttribute="leading" id="r1L-Mq-8az"/>
+                                    <constraint firstItem="ba7-p2-fza" firstAttribute="leading" secondItem="MMq-Kr-3XS" secondAttribute="leading" constant="70" id="tMX-No-UVM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LIb-bO-5w5"/>
+                                        <exclude reference="tMX-No-UVM"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803921568626" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MMq-Kr-3XS" firstAttribute="centerX" secondItem="e4c-k4-vNk" secondAttribute="centerX" id="ElI-Kd-ADa"/>
+                            <constraint firstItem="MMq-Kr-3XS" firstAttribute="top" secondItem="XrW-Dx-jET" secondAttribute="bottom" constant="250" id="IJf-NZ-3bP"/>
+                            <constraint firstItem="MMq-Kr-3XS" firstAttribute="leading" secondItem="e4c-k4-vNk" secondAttribute="leadingMargin" constant="51" id="phU-Er-kJs"/>
+                            <constraint firstItem="MMq-Kr-3XS" firstAttribute="centerY" secondItem="e4c-k4-vNk" secondAttribute="centerY" id="rKJ-6K-QeH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IJf-NZ-3bP"/>
+                                <exclude reference="phU-Er-kJs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sk0-L0-TkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2016.5" y="-497.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Calculator-104" width="52" height="52"/>
+    </resources>
+</document>
